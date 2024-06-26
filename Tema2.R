@@ -358,6 +358,15 @@ x<- with(murders,total / population *1)
 hist(x)
 
 
+# Actividad guiada. Instalar ggplot y writeXLS
+
+
+install.packages("WriteXLS")
+library(WriteXLS)
+library(ggplot2)
+
+
+
 
 #--------------------------
 #Parte 2
@@ -375,6 +384,7 @@ mialumna$calif.materias[3]
 x <- 6:8
 x
 y <- c("A", "B", "C")
+y
 
 misgrupos <- data.frame(alumnos = x, nivel = y)
 str(misgrupos)
@@ -440,5 +450,5 @@ misgrupos$nivel
   b<-c(12,14,16,18,20)
   barplot(a,b)
   
-  pie(a)
+  pie(b)
   

@@ -1,8 +1,10 @@
 
 #1. Desde la consola, verifica dónde te encuentras actualmente con getwd(), 
 # posteriormente ve a Rcourse/Module1 con setwd().
+#Verifica donde te encuentras actualmente
 getwd()
 # "C:/Users/Usuario/Documents/Ciencia de Datos/R/DATASETS"
+# Mover directorio actual 
 setwd("C:/Users/Usuario/Documents/Ciencia de Datos/R/Rcourse/Module2")
 
 #"C:/Users/Usuario/Documents/Ciencia de Datos/R/Rcourse/Module1"
@@ -10,6 +12,8 @@ setwd("C:/Users/Usuario/Documents/Ciencia de Datos/R/Rcourse/Module2")
 #2. Usa R como calculadora para calcular la raíz cuadrada de 654 (Si no conoces la función, puedes buscarla en Internet).
 sqrt(654)
 #3. Usa R como calculadora para calcular el porcentaje de hombres y mujeres presentes actualmente en el curso.
+
+#variable<-valor 
 mujeres<-12
 hombres<-15
 total<-mujeres + hombres
