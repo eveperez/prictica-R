@@ -8,6 +8,14 @@
  
  rm(list=ls())
  
+ ?diamonds
+ 
+ diamonds
+ mtcards
+ iris
+ murders
+ 
+ settw(C:/Users/eveli/Documents/R/scripts/Ejercicio2R.R)
  
 data("diamonds") #carga diamantes
 
@@ -46,7 +54,7 @@ head(diamonds)
   # 4. Desde la consola Instala y carga el paquete dplyr.
   
   install.packages("dbplyr") #LIBRERIA PARA EL MANEJO DE BASES DE DATOS
-  library(dbplyr)
+  library(dbplyr) #Usar la libreria, se activa
   
   # 5. Usa la función "sample_n" del paquete dplyr para muestrear aleatoriamente 200 
   #   líneas de diams1. Guarda en el objeto diams1.
@@ -70,18 +78,27 @@ head(diamonds)
   setwd("C:/Users/Usuario/Documents/Ciencia de Datos/R/Rcourse/Module2")
    
   install.packages("utilities") #instala el paquete
-  library("utilities") #se activa el paquete
+  library(utilities) #se activa el paquete
   
-  write.table(diams1,"diamonds200.txt")
+  write.table(diams1,"diamonds200.txt") # Genera un txt en la ruta que se configuró
+  
   
   # • diamonds200.xls con función WriteXLS (del paquete del mismo nombre WriteXLS)
   
-  WriteXLS(diams1,ExcelFileName= "diamonds200.xls",  perl = "perl") 
-  
   install.packages("xlsx")
+  library(xlsx)
   
-  write.xlsx(diams1,"diamonds2005.xlsx")
+  install.packages("openxlsx")
+  library(openxlsx)
+  
+  WriteXLS(diams1,ExcelFileName= "diamonds200.xlsx",  perl = "perl") 
+  
+  write.xlsx(diams1,"diamonds200.xlsx")
   
   write.xlsx()
+  
+  write.csv(diams1,"diamonds.csv")
+  
+  testPerl(perl = "per1", verbose = TRUE)
   
   

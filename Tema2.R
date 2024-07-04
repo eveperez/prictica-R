@@ -171,6 +171,12 @@ matriz <- rbind(vector_1, vector_2, vector_3, vector_4) # row bin (union de dato
 matriz
 
 
+mimatriz <- matrix(data=1:20, nrow=4, ncol=5, byrow=FALSE)
+mimatriz
+
+mimatriz <- matrix( nrow=3, ncol=9, byrow=FALSE)
+
+
 matriz2 <- cbind(vector_1, vector_2, vector_3, vector_4) #  (union de datos, te los acomoda por filas)
 matriz2
 class(matriz2)
@@ -207,6 +213,8 @@ matriz4[1:9,4]
 matriz4[3:5,3:5]
 matriz4[6:8,2:3]
 matriz4[9,3:5]
+matriz4[9,1:5]
+matriz4[]
 
 
 matriz3[3, 3:2]# 
@@ -375,7 +383,7 @@ library(ggplot2)
 mialumna <- list(nombre = "Paty", no.materias = 3, calif.materias = c(10, 7, 9))
 mialumna
 
-mialumna$nombre #extrae el nompre de la lista
+mialumna$nombre #extrae el nombre de la lista
 mialumna$calif.materias[1]#extrae la calificacion 1 de la lista dentro de otra lista
 mialumna$calif.materias[2]
 mialumna$calif.materias[3]
@@ -384,26 +392,31 @@ mialumna$calif.materias[3]
 x <- 6:8
 x
 y <- c("A", "B", "C")
+y <- c(6:8)
 y
+
 
 misgrupos <- data.frame(alumnos = x, nivel = y)
 str(misgrupos)
 
 misgrupos
 
-#a) Extrae la información del df igual que con las matrices:
+
+#a) Extrae la información del data frame igual que con las matrices:
 misgrupos[1]
 misgrupos[,1]
 misgrupos$nivel
+
 
 #b) Calcula algunos estadísticos básicos:
   mean(misgrupos$alumnos)
   max(misgrupos$alumnos)
 
+  
 #c) Agregar un mensaje con la función paste:
   paste("La media de alumnos es:", mean(misgrupos$alumnos), " fin del ejemplo")
 
-#d) Inspecciona a detalle el df utilizando summary:
+#d) Inspecciona a detalle el data frame utilizando summary:
   summary(misgrupos)
   
 #e) Obtener la dimensión:
@@ -422,8 +435,6 @@ misgrupos$nivel
   
   
   
-  
-  
   #ACTIVIDAD 4
   #Los plots se pueden guardar como objetos con ggplot2. Una vez que instalaste el ggplot2 
   #como se indicó en el prework, podrás asociar un conjunto 
@@ -431,10 +442,13 @@ misgrupos$nivel
   
  # p <- ggplot(data = murders)
   #p
+  murders
+  
   plot(misgrupos$alumnos,misgrupos$edificio)
   
   x<-murders$population / 10^6
   y<-murders$total
+  
   
   plot(x,y)
   

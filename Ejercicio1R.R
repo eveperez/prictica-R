@@ -39,6 +39,10 @@ Mode(edad) #moda
 #Instalar la libreria
 install.packages("DescTools")
 
+#Utilizar la libreria 
+library(name_library)
+
+
 quantile(edad, 0.50)
 
 percentiles <- quantile(edad, type= 1 )
